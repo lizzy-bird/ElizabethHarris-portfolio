@@ -227,17 +227,23 @@ html {
 }
 
 .comingSoon {
+  margin: 0 auto;
   background-color: #0b4149;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.comingSoon h1 {
+  width: 100%;
 }
 
 body {

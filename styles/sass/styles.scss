@@ -2,11 +2,17 @@
 @import "themes";
 
 .comingSoon{
+    margin:0 auto;
     background-color:#0b4149;
     height:100vh;
     display:flex;
+    flex-wrap:wrap;
     justify-content:center;
     align-items:center;
+
+    h1{
+        width:100%;
+    }
 }
 
 body{
