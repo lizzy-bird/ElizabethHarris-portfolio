@@ -1,23 +1,288 @@
 @import "setup";
+@import "themes";
 
 body{
-    background-color:teal;
+    background-color:#1b1b1a;
+}
+
+.wrapper{
+    max-width:1500px;
+    margin:0 auto;
+    
+}
+
+
+h1, 
+h2,
+h3,
+h4,
+h5{
+    margin:0;
+    color:$secondary-color;
 }
 
 h1{
-    color:white;
-    font-family:sans-serif;
-    font-size:14rem;
+    color:$secondary-color;
+    width:100%;
+    font-family:'satisfy', script;
+    font-size:8rem;
     text-align:center;
     letter-spacing:-2px;
     margin:0;
+    margin-bottom:-30px;
+    
+}
+
+h2{
+    font-size:6rem;
+    transform:rotate(-90deg);
+    opacity:0.05;
+    position:absolute;
+    left:0;
+    bottom:50%;
+}
+
+a{
+    color:$secondary-color;
 }
 
 p{
-    color:white;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:2rem;
-    text-align:center;
-    margin-top:50px;
+    color:$secondary-color;
+    font-family:'Raleway', sans-serif;
+    font-size:1.2rem;
+    text-align:left;
+    padding-top:50px;
+    margin:0;
+}
 
+.hero{
+        //this is the background gradient//
+    background-image:linear-gradient( 
+        61deg, 
+        rgba(30,51,65,1), 
+        rgba(11,65,73,1), 
+        rgba(114,110,73,1), 
+        rgba(107,115,106,1),
+        rgb(49, 49, 49), 
+        rgba(11,65,73,1)
+    );
+        
+    // background-image: url('../images/portfolioSiteBackground.png');
+    // background-position: bottom;
+    // background-size: cover;
+    background-size:200%;
+    background-repeat:no-repeat;
+    height:100vh;
+    margin:0;
+    animation: heroAnimation 50s linear infinite;
+    border-bottom:6px double $secondary-color;
+}
+
+@keyframes heroAnimation{
+    0%{
+        background-position:0% 50%;
+    }
+    25%{
+        background-position:50% 100%;
+    }
+    50%{
+        background-position:100% 100%;
+    }
+    75%{
+        background-position:50% 100%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+.grid{
+    margin:0; 
+    height:100vh;
+    background-image:
+    //this is the grid//
+    repeating-linear-gradient(
+        0deg, 
+        rgba(0, 0, 0, 0.05) 0px, 
+        rgba(0, 0, 0, 0.05) 1px,
+        transparent 1px, 
+        transparent 5px,
+        rgba(0, 0, 0, 0.05) 5px, 
+        rgba(0, 0, 0, 0.05) 6px,
+        transparent 6px, 
+        transparent 16px
+        ),repeating-linear-gradient(
+        90deg, 
+        rgba(0,0,0,0.05) 0px, 
+        rgba(0, 0, 0, 0.05) 1px,
+        transparent 1px, 
+        transparent 11px,
+        rgba(0, 0, 0, 0.05) 11px, 
+        rgba(0,0,0,0.05) 12px,
+        transparent 12px, 
+        transparent 32px
+        );
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+
+}
+
+header{
+    position:absolute;
+    z-index:100;
+    width:90%;
+    margin:2% 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+i{
+    color:$secondary-color;
+    font-size: 2rem;
+}
+
+nav{
+    width:30%;
+    
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+}
+
+nav a{
+    color:$secondary-color;
+    font-family:'Raleway', sans-serif;
+    font-size: 20px;
+    text-align:right;
+    text-decoration:none;
+    cursor: pointer;
+}
+
+nav li:hover,
+nav a:focus{
+    border-bottom:2px solid $secondary-color;
+    text-shadow: 1px 1px 4px #dbd5cd;
+
+}
+
+.fa-palette:hover{
+    color:black;
+    transition: all 0.3s linear;
+    cursor: url("../images/paintbrush.png"), pointer;
+}
+
+.comingSoon{
+    background-color:#0b4149;
+    height:100vh;
+}
+
+.titleHeading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:60%;
+    margin:0 auto;
+    padding:0 4.5%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    h1{
+        text-shadow: 4px 1px 8px #dbd5cd;
+    }
+
+}
+
+
+
+.tagLine {
+    color:$secondary-color;
+    font-family:'Raleway', sans-serif;
+    font-size:20px;
+    display:inline-block;
+    width:100%;
+    text-align:right;
+    font-weight: 200;
+    margin:0;
+}
+
+.fa-angles-down{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+}
+
+.fa-angles-down:hover{
+    color:black;
+    cursor: pointer;
+    transition:all 0.3s linear;
+}
+
+.aboutMe,
+.portfolio,
+.contact{
+    background-color:#1b1b1a;
+    display:flex;
+    flex-wrap:wrap;
+    padding:5%;
+}
+
+.aboutMe{
+    position:relative;
+
+    
+
+    img{
+        background-color:#726e49;
+        border-radius:90%;
+        
+    }
+}
+
+.profile{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    div{
+        display:flex;
+        flex-direction:column;
+        width:60%;
+        padding-left:10%;
+
+    }
+    
+}
+
+.skills{
+    display:flex;
+        flex-direction:column;
+        width:100%;
+        padding-left:10%;
+}
+
+
+.portfolio, 
+.contact{
+    position:relative;
+}
+
+.portfolio{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    width:90%;
+}
+
+.projects{
+    width:40%;
 }

@@ -227,22 +227,303 @@ html {
 }
 
 body {
-  background-color: teal;
+  background-color: #1b1b1a;
+}
+
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  color: #EDEDED;
 }
 
 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 14rem;
+  color: #EDEDED;
+  width: 100%;
+  font-family: "satisfy", script;
+  font-size: 8rem;
   text-align: center;
   letter-spacing: -2px;
   margin: 0;
+  margin-bottom: -30px;
+}
+
+h2 {
+  font-size: 6rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  opacity: 0.05;
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+}
+
+a {
+  color: #EDEDED;
 }
 
 p {
-  color: white;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #EDEDED;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.hero {
+  background-image: linear-gradient(61deg, #1e3341, #0b4149, #726e49, #6b736a, #313131, #0b4149);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  -webkit-animation: heroAnimation 50s linear infinite;
+          animation: heroAnimation 50s linear infinite;
+  border-bottom: 6px double #EDEDED;
+}
+
+@-webkit-keyframes heroAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes heroAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.grid {
+  margin: 0;
+  height: 100vh;
+  background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 5px, rgba(0, 0, 0, 0.05) 5px, rgba(0, 0, 0, 0.05) 6px, transparent 6px, transparent 16px), repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 11px, rgba(0, 0, 0, 0.05) 11px, rgba(0, 0, 0, 0.05) 12px, transparent 12px, transparent 32px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  position: absolute;
+  z-index: 100;
+  width: 90%;
+  margin: 2% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+i {
+  color: #EDEDED;
   font-size: 2rem;
+}
+
+nav {
+  width: 30%;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav a {
+  color: #EDEDED;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  text-align: right;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav li:hover,
+nav a:focus {
+  border-bottom: 2px solid #EDEDED;
+  text-shadow: 1px 1px 4px #dbd5cd;
+}
+
+.fa-palette:hover {
+  color: black;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: url("../images/paintbrush.png"), pointer;
+}
+
+.comingSoon {
+  background-color: #0b4149;
+  height: 100vh;
+}
+
+.titleHeading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 4.5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.titleHeading h1 {
+  text-shadow: 4px 1px 8px #dbd5cd;
+}
+
+.tagLine {
+  color: #EDEDED;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  font-weight: 200;
+  margin: 0;
+}
+
+.fa-angles-down {
+  display: inline-block;
+  width: 100%;
   text-align: center;
-  margin-top: 50px;
+}
+
+.fa-angles-down:hover {
+  color: black;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.aboutMe,
+.portfolio,
+.contact {
+  background-color: #1b1b1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5%;
+}
+
+.aboutMe {
+  position: relative;
+}
+.aboutMe img {
+  background-color: #726e49;
+  border-radius: 90%;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.profile div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  padding-left: 10%;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding-left: 10%;
+}
+
+.portfolio,
+.contact {
+  position: relative;
+}
+
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.projects {
+  width: 40%;
 }
