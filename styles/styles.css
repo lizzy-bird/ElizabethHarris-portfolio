@@ -226,6 +226,20 @@ html {
   overflow: hidden;
 }
 
+.comingSoon {
+  background-color: #0b4149;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body {
   background-color: #1b1b1a;
 }
@@ -396,11 +410,6 @@ nav a:focus {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   cursor: url("../images/paintbrush.png"), pointer;
-}
-
-.comingSoon {
-  background-color: #0b4149;
-  height: 100vh;
 }
 
 .titleHeading {
