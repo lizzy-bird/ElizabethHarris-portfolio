@@ -282,9 +282,13 @@ h2 {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   opacity: 0.05;
-  position: absolute;
-  left: 0;
-  bottom: 50%;
+  position: relative;
+  z-index: 100;
+  float: left;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 10%;
 }
 
 a {
@@ -451,9 +455,10 @@ nav a:focus {
   text-align: right;
   font-weight: 200;
   margin: 0;
+  padding-top: 0;
 }
 
-.fa-angles-down {
+.downArrow {
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -467,7 +472,6 @@ nav a:focus {
 }
 
 .aboutMe,
-.portfolio,
 .contact {
   background-color: #1b1b1a;
   display: -webkit-box;
@@ -475,7 +479,7 @@ nav a:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 5%;
+  padding-top: 5%;
 }
 
 .aboutMe {
@@ -483,7 +487,12 @@ nav a:focus {
 }
 .aboutMe img {
   background-color: #726e49;
-  border-radius: 90%;
+  border-radius: 50%;
+  max-width: 100%;
+  width: 35%;
+  margin-left: 5%;
+  -webkit-box-shadow: 10px 10px 0 #ededed;
+          box-shadow: 10px 10px 0 #ededed;
 }
 
 .profile {
@@ -493,9 +502,9 @@ nav a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
 }
 .profile div {
   display: -webkit-box;
@@ -506,27 +515,23 @@ nav a:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 60%;
-  padding-left: 10%;
 }
-
-.skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  padding-left: 10%;
-}
-
-.portfolio,
-.contact {
-  position: relative;
+.profile p {
+  margin-bottom: 5%;
 }
 
 .portfolio {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.projects {
+  width: 40%;
+  margin: 5%;
+}
+
+.portfolioItems {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,12 +540,5 @@ nav a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-}
-
-.projects {
-  width: 40%;
+  margin-left: 20%;
 }

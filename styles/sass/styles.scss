@@ -51,9 +51,13 @@ h2{
     font-size:6rem;
     transform:rotate(-90deg);
     opacity:0.05;
-    position:absolute;
-    left:0;
-    bottom:50%;
+    position:relative;
+    z-index:100;
+    float:left;
+    height:fit-content;
+    margin-top:10%;
+    
+    
 }
 
 a{
@@ -221,9 +225,13 @@ nav a:focus{
     text-align:right;
     font-weight: 200;
     margin:0;
+    padding-top:0;
+    
+
 }
 
-.fa-angles-down{
+
+.downArrow{
     display:inline-block;
     width:100%;
     text-align:center;
@@ -236,62 +244,67 @@ nav a:focus{
 }
 
 .aboutMe,
-.portfolio,
 .contact{
     background-color:#1b1b1a;
     display:flex;
     flex-wrap:wrap;
-    padding:5%;
+    padding-top:5%;
 }
 
 .aboutMe{
     position:relative;
+    
 
     
 
     img{
         background-color:#726e49;
-        border-radius:90%;
-        
+        border-radius:50%;
+        max-width:100%;
+        width:35%;
+        margin-left:5%;
+        box-shadow:10px 10px 0 #ededed;
     }
 }
 
 .profile{
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    flex-wrap:wrap;
+    width:80%;
 
     div{
         display:flex;
         flex-direction:column;
         width:60%;
-        padding-left:10%;
 
+    }
+    
+    p{
+        margin-bottom:5%;
     }
     
 }
 
-.skills{
-    display:flex;
-        flex-direction:column;
-        width:100%;
-        padding-left:10%;
-}
-
-
-.portfolio, 
-.contact{
-    position:relative;
-}
 
 .portfolio{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    align-items:center;
-    width:90%;
+    margin:0 auto;
+    width:100%;
+    
+    // background-image:url("../images/aboutBackground.png");
+    // background-size:cover;
+    // background-position:center;
 }
 
 .projects{
     width:40%;
+    margin:5%;
+}
+
+.portfolioItems{
+    width:80%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-left:20%;
 }
