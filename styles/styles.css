@@ -264,6 +264,8 @@ h4,
 h5 {
   margin: 0;
   color: #EDEDED;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
 }
 
 h1 {
@@ -278,21 +280,38 @@ h1 {
 }
 
 h2 {
-  font-size: 6rem;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  opacity: 0.05;
-  position: relative;
-  z-index: 100;
-  float: left;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-top: 10%;
+  font-size: 4rem;
+  font-family: "satisfy", script;
+  width: 100%;
+  padding-bottom: 1%;
+  border-bottom: 6px double #0b4149;
+}
+
+h3 {
+  font-size: 3rem;
+  color: #726e49;
+}
+
+h4 {
+  font-size: 2rem;
 }
 
 a {
   color: #EDEDED;
+}
+
+.button {
+  background-color: #726e49;
+  padding: 10px 15px;
+  margin: 2%;
+  font-family: "Raleway", sans-serif;
+  border: 3px solid #726e49;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ededed;
+  color: #726e49;
 }
 
 p {
@@ -300,7 +319,6 @@ p {
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   text-align: left;
-  padding-top: 50px;
   margin: 0;
 }
 
@@ -421,7 +439,6 @@ nav a:focus {
   color: black;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  cursor: url("../images/paintbrush.png"), pointer;
 }
 
 .titleHeading {
@@ -472,25 +489,21 @@ nav a:focus {
 }
 
 .aboutMe,
-.contact {
+.contact,
+.portfolio {
   background-color: #1b1b1a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding-top: 5%;
 }
 
-.aboutMe {
-  position: relative;
-}
 .aboutMe img {
   background-color: #726e49;
   border-radius: 50%;
   max-width: 100%;
-  width: 35%;
-  margin-left: 5%;
+  width: 30%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
   -webkit-box-shadow: 10px 10px 0 #ededed;
           box-shadow: 10px 10px 0 #ededed;
 }
@@ -504,9 +517,15 @@ nav a:focus {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
+  margin: 5% auto;
 }
-.profile div {
+.profile p {
+  margin-bottom: 5%;
+  margin-top: 20px;
+}
+
+.profileText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,31 +533,160 @@ nav a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60%;
-}
-.profile p {
-  margin-bottom: 5%;
+  width: 55%;
 }
 
-.portfolio {
-  margin: 0 auto;
-  width: 100%;
+.currentlyLearning {
+  margin-top: 0;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #726e49;
 }
 
-.projects {
-  width: 40%;
-  margin: 5%;
-}
-
-.portfolioItems {
-  width: 80%;
+.skillsIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.skillsIcons i {
+  font-size: 4rem;
+  margin: 3%;
+  color: #0b4149;
+}
+
+.socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.socialIcons i {
+  font-size: 3rem;
+  margin: 2%;
+  color: #ededed;
+}
+.socialIcons i:hover {
+  color: #0b4149;
+  cursor: pointer;
+}
+
+.portfolio,
+.aboutMe,
+.contact {
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 5%;
+}
+
+.portfolioItems {
+  width: 80%;
+  padding: 1%;
+  margin: 0 auto;
+}
+
+.projects-border {
+  background-image: linear-gradient(61deg, #1e3341, #0b4149, #726e49, #6b736a, #313131, #0b4149);
+  padding: 5px;
+  margin: 3% 0;
+  height: auto;
+}
+
+.projects {
+  background-color: #1b1b1a;
+  padding: 2%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: rgba(114, 114, 114, 0.7) 0px 0px 20px;
+          box-shadow: rgba(114, 114, 114, 0.7) 0px 0px 20px;
+  padding: 2%;
+}
+.projects img {
+  width: 50%;
+  height: auto;
+}
+
+.portfolioText {
+  width: 45%;
+  padding-left: 2%;
+  text-align: center;
+}
+.portfolioText p {
+  margin: 3% 0;
+}
+
+.summary {
+  font-size: 1rem;
+  color: #726e49;
+  font-style: italic;
+  text-align: center;
+}
+
+.projectSkills {
+  margin: 2%;
+}
+.projectSkills i {
+  color: #0b4149;
+  font-size: 3rem;
+  padding: 4%;
+  padding-top: 0;
+}
+
+.contact {
+  text-align: center;
+}
+.contact h2 {
+  text-align: left;
+}
+.contact p {
+  text-align: center;
+  margin: 5% 0;
+}
+.contact h4 {
+  font-family: "satisfy", script;
+  font-size: 2.5rem;
+  color: #726e49;
+  margin: 2% 0;
+}
+.contact a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2% auto;
+}
+
+footer {
+  height: 50px;
+  margin: 0;
+  background-color: #0b4149;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: #ededed;
 }

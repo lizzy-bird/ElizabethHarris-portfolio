@@ -33,6 +33,8 @@ h4,
 h5{
     margin:0;
     color:$secondary-color;
+    font-family:'Raleway', sans-serif;
+    font-weight:200;
 }
 
 h1{
@@ -48,15 +50,27 @@ h1{
 }
 
 h2{
-    font-size:6rem;
-    transform:rotate(-90deg);
-    opacity:0.05;
-    position:relative;
-    z-index:100;
-    float:left;
-    height:fit-content;
-    margin-top:10%;
-    
+    font-size:4rem;
+    font-family:'satisfy', script;
+    width:100%;
+    padding-bottom:1%;
+    border-bottom:6px double #0b4149;
+    // opacity:0.25;
+    // transform:rotate(-90deg);
+    // position:relative;
+    // z-index:100;
+    // float:left;
+    // height:fit-content;
+    // margin-top:10%;
+}
+
+h3{
+    font-size:3rem;
+    color:#726e49;
+}
+
+h4{
+    font-size:2rem;
     
 }
 
@@ -64,12 +78,26 @@ a{
     color:$secondary-color;
 }
 
+.button{
+    background-color:#726e49;
+    padding:10px 15px;
+    margin:2%;
+    font-family:'Raleway', sans-serif;
+    border:3px solid #726e49;
+}
+
+.button:hover,
+.button:focus{
+    background-color:#ededed;
+    color:#726e49;
+}
+
+
 p{
     color:$secondary-color;
     font-family:'Raleway', sans-serif;
     font-size:1.2rem;
     text-align:left;
-    padding-top:50px;
     margin:0;
 }
 
@@ -160,7 +188,8 @@ header{
 
 i{
     color:$secondary-color;
-    font-size: 2rem;
+    font-size:2rem;
+    
 }
 
 nav{
@@ -193,7 +222,7 @@ nav a:focus{
 .fa-palette:hover{
     color:black;
     transition: all 0.3s linear;
-    cursor: url("../images/paintbrush.png"), pointer;
+    // cursor: url("../images/paintbrush.png"), pointer;
 }
 
 .titleHeading{
@@ -244,25 +273,21 @@ nav a:focus{
 }
 
 .aboutMe,
-.contact{
+.contact,
+.portfolio{
     background-color:#1b1b1a;
-    display:flex;
-    flex-wrap:wrap;
     padding-top:5%;
 }
 
 .aboutMe{
-    position:relative;
-    
-
-    
 
     img{
         background-color:#726e49;
         border-radius:50%;
         max-width:100%;
-        width:35%;
-        margin-left:5%;
+        width:30%;
+        height:fit-content;
+        margin:0 auto;
         box-shadow:10px 10px 0 #ededed;
     }
 }
@@ -271,40 +296,182 @@ nav a:focus{
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
-    width:80%;
+    width:100%;
+    margin:5% auto;
 
-    div{
-        display:flex;
-        flex-direction:column;
-        width:60%;
-
-    }
     
     p{
         margin-bottom:5%;
+        margin-top:20px;
     }
     
 }
 
+.profileText{
+    display:flex;
+    flex-direction:column;
+    width: 55%;
 
-.portfolio{
-    margin:0 auto;
-    width:100%;
-    
-    // background-image:url("../images/aboutBackground.png");
-    // background-size:cover;
-    // background-position:center;
 }
 
-.projects{
-    width:40%;
-    margin:5%;
+.currentlyLearning{
+    margin-top:0;
+    font-weight:600;
+    font-style:italic;
+    font-size:1.25rem;
+    text-align:center;
+    color:#726e49;
+
+}
+
+.skillsIcons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+
+    i{
+    font-size: 4rem;
+    margin:3%;
+    color:#0b4149;
+    }
+}
+
+.socialIcons{
+    display:flex;
+    justify-content:center;
+
+    i{
+        font-size:3rem;
+        margin:2%;
+        color:#ededed;
+    }
+
+    i:hover{
+        color:#0b4149;
+        cursor: pointer;
+    }
+}
+
+
+.portfolio,
+.aboutMe,
+.contact{
+    margin:0 auto;
+    width:100%;
+    padding-top:5%;
 }
 
 .portfolioItems{
     width:80%;
+    padding:1%;
+    margin:0 auto;
+
+}
+
+.projects-border{
+    background-image:linear-gradient( 
+        61deg, 
+        rgba(30,51,65,1), 
+        rgba(11,65,73,1), 
+        rgba(114,110,73,1), 
+        rgba(107,115,106,1),
+        rgb(49, 49, 49), 
+        rgba(11,65,73,1)
+        );
+        padding:5px;
+        margin: 3% 0;
+        height:auto;
+        
+    }
+    
+.projects{
+    background-color:#1b1b1a;
+    padding:2%;
+    // display:flex;
+    width:100%;
     display:flex;
-    flex-wrap:wrap;
     justify-content:space-between;
-    margin-left:20%;
+    align-items:center;
+    flex-wrap:wrap;
+    box-shadow: rgba(114, 114, 114, 0.7) 0px 0px 20px;
+    padding:2%;
+    
+
+    img{
+        width:50%;
+        height:auto;
+    }
+    
+}
+.portfolioText{
+    width:45%;
+    padding-left:2%;
+    text-align:center;
+
+    p{
+        margin:3% 0 ;
+    }
+}
+
+.summary{
+    font-size:1rem;
+    color:#726e49;
+    font-style:italic;
+    text-align:center;
+
+}
+
+.projectSkills{
+    margin:2%;
+    
+
+    i{
+        color:#0b4149;
+        font-size:3rem;
+        padding:4%;
+        padding-top:0;
+    }
+}
+
+.contact{
+    text-align:center;
+
+    h2{
+        text-align:left;
+    }
+    p{
+        text-align:center;
+        margin:5% 0;
+    }
+
+    h4{
+        font-family:'satisfy', script;
+        font-size:2.5rem;
+        color:#726e49;
+        margin:2% 0;
+        
+    }
+
+    a{
+        display:block;
+        width:fit-content;
+        margin:2% auto;
+    }
+
+}
+
+footer{
+    height:50px;
+    margin:0;
+    background-color:#0b4149;
+    display:flex;
+    align-items:center;
+
+    h4{
+        font-family:'Raleway', sans-serif;
+        font-size:1rem;
+        color:#ededed;
+        
+        
+    }
 }
