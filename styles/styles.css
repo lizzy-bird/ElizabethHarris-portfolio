@@ -226,28 +226,9 @@ html {
   overflow: hidden;
 }
 
-.comingSoon {
-  margin: 0 auto;
-  background-color: #0b4149;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.comingSoon h1 {
-  width: 100%;
-}
-
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
 body {
   background-color: #1b1b1a;
 }
@@ -255,6 +236,7 @@ body {
 .wrapper {
   max-width: 1500px;
   margin: 0 auto;
+  padding: 5%;
 }
 
 h1,
@@ -407,7 +389,14 @@ i {
 }
 
 nav {
-  width: 30%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  position: sticky;
 }
 
 nav ul {
@@ -418,6 +407,7 @@ nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 35%;
 }
 
 nav a {
@@ -433,12 +423,6 @@ nav li:hover,
 nav a:focus {
   border-bottom: 2px solid #EDEDED;
   text-shadow: 1px 1px 4px #dbd5cd;
-}
-
-.fa-palette:hover {
-  color: black;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
 
 .titleHeading {
@@ -569,12 +553,14 @@ nav a:focus {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.socialIcons i {
+.socialIcons i,
+.socialIcons a {
   font-size: 3rem;
   margin: 2%;
   color: #ededed;
 }
-.socialIcons i:hover {
+.socialIcons i:hover,
+.socialIcons a:hover {
   color: #0b4149;
   cursor: pointer;
 }

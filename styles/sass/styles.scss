@@ -1,27 +1,17 @@
 @import "setup";
 @import "themes";
+@import "mediaqueries";
 
-.comingSoon{
-    margin:0 auto;
-    background-color:#0b4149;
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
 
-    h1{
-        width:100%;
-    }
-}
 
 body{
-    background-color:#1b1b1a;
+    background-color: $background-color;
 }
 
 .wrapper{
     max-width:1500px;
     margin:0 auto;
+    padding:5%;
     
 }
 
@@ -193,7 +183,11 @@ i{
 }
 
 nav{
-    width:30%;
+    // width:30%; with color changer only
+    width:100%;
+    display:flex;
+    justify-content:right;
+    position:sticky;
     
 }
 
@@ -201,6 +195,8 @@ nav ul{
     list-style:none;
     display:flex;
     justify-content:space-between;
+    width:35%;
+    
 }
 
 nav a{
@@ -219,11 +215,11 @@ nav a:focus{
 
 }
 
-.fa-palette:hover{
-    color:black;
-    transition: all 0.3s linear;
-    // cursor: url("../images/paintbrush.png"), pointer;
-}
+// .fa-palette:hover{
+//     color:black;
+//     transition: all 0.3s linear;
+//     cursor: pointer;
+// }
 
 .titleHeading{
     position: absolute;
@@ -340,13 +336,15 @@ nav a:focus{
     display:flex;
     justify-content:center;
 
-    i{
+    i,
+    a{
         font-size:3rem;
         margin:2%;
         color:#ededed;
     }
 
-    i:hover{
+    i:hover,
+    a:hover{
         color:#0b4149;
         cursor: pointer;
     }
@@ -385,7 +383,7 @@ nav a:focus{
     }
     
 .projects{
-    background-color:#1b1b1a;
+    background-color: $background-color;
     padding:2%;
     // display:flex;
     width:100%;
