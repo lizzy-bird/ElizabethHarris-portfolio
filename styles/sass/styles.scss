@@ -1,11 +1,11 @@
 @import "setup";
 @import "themes";
-@import "mediaqueries";
+
 
 
 
 body{
-    background-color: $background-color;
+    background-image:url("../images/aboutBackground.png");
 }
 
 .wrapper{
@@ -110,7 +110,7 @@ p{
     background-repeat:no-repeat;
     height:100vh;
     margin:0;
-    animation: heroAnimation 50s linear infinite;
+    animation: heroAnimation 35s linear infinite;
     border-bottom:6px double $secondary-color;
 }
 
@@ -176,6 +176,12 @@ header{
 
 }
 
+input[type="checkbox"], 
+label[for="toggle"]{
+    opacity:0;
+    float:left;
+}
+
 i{
     color:$secondary-color;
     font-size:2rem;
@@ -187,7 +193,7 @@ nav{
     width:100%;
     display:flex;
     justify-content:right;
-    position:sticky;
+
     
 }
 
@@ -272,8 +278,13 @@ nav a:focus{
 .contact,
 .portfolio{
     background-color:#1b1b1a;
+    box-shadow: rgba(114, 114, 114, 0.7) 0px 0px 20px;
+    margin:3% auto;
+    width:100%;
     padding-top:5%;
+    border-radius:50px;
 }
+
 
 .aboutMe{
 
@@ -351,13 +362,7 @@ nav a:focus{
 }
 
 
-.portfolio,
-.aboutMe,
-.contact{
-    margin:0 auto;
-    width:100%;
-    padding-top:5%;
-}
+
 
 .portfolioItems{
     width:80%;
@@ -378,21 +383,22 @@ nav a:focus{
         );
         padding:5px;
         margin: 3% 0;
-        height:auto;
+        height:fit-content;
         
     }
     
 .projects{
     background-color: $background-color;
-    padding:2%;
+    padding:4% 2%;
     // display:flex;
     width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
-    box-shadow: rgba(114, 114, 114, 0.7) 0px 0px 20px;
-    padding:2%;
+    // box-shadow: rgba(114, 114, 114, 0.7) 0px 0px 20px;
+    
+    
     
 
     img{
@@ -454,6 +460,12 @@ nav a:focus{
         display:block;
         width:fit-content;
         margin:2% auto;
+
+    }
+
+    .socialIcons{
+        width:25%;
+        margin:0 auto;
     }
 
 }
@@ -473,3 +485,5 @@ footer{
         
     }
 }
+
+@import "mediaqueries";
