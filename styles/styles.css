@@ -277,6 +277,7 @@ h4 {
 
 a {
   color: #EDEDED;
+  font-family: "Raleway", sans-serif;
 }
 
 .button {
@@ -731,7 +732,7 @@ label[for=toggle]:focus {
     z-index: 500;
     font-size: 4rem;
     width: 100%;
-    height: 40vh;
+    height: 100vh;
     opacity: 0.8;
   }
   nav ul li {
@@ -777,6 +778,14 @@ label[for=toggle]:focus {
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  .aboutMe, .contact, .portfolio {
+    width: 100%;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0 auto;
+  }
+
   .titleHeading {
     width: 100%;
   }
