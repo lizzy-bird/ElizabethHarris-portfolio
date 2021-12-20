@@ -227,7 +227,7 @@ html {
 }
 
 body {
-  background-image: url("../images/aboutBackground.png");
+  background-image: url("../files/aboutBackground.png");
 }
 
 .wrapper {
@@ -286,6 +286,9 @@ a {
   margin: 2%;
   font-family: "Raleway", sans-serif;
   border: 3px solid #726e49;
+  display: inline-block;
+  width: 45%;
+  line-height: 1.8rem;
 }
 
 .button:hover,
@@ -300,22 +303,23 @@ p {
   font-size: 1.2rem;
   text-align: left;
   margin: 0;
+  line-height: 1.8rem;
 }
 
 .hero {
-  background-image: linear-gradient(61deg, #1e3341, #0b4149, #726e49, #6b736a, #313131, #0b4149);
-  background-size: 200%;
+  background: radial-gradient(circle, #0b4149 15%, #726e49 43%, #6b736a 69%, #0b4149 90%, #1e3341 97%);
+  background-size: 400%;
   background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
-  -webkit-animation: heroAnimation 35s linear infinite;
-          animation: heroAnimation 35s linear infinite;
+  -webkit-animation: heroAnimation 70s linear infinite;
+          animation: heroAnimation 70s linear infinite;
   border-bottom: 6px double #EDEDED;
 }
 
 @-webkit-keyframes heroAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   25% {
     background-position: 50% 100%;
@@ -324,16 +328,16 @@ p {
     background-position: 100% 100%;
   }
   75% {
-    background-position: 50% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 
 @keyframes heroAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   25% {
     background-position: 50% 100%;
@@ -342,10 +346,10 @@ p {
     background-position: 100% 100%;
   }
   75% {
-    background-position: 50% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 .grid {
@@ -363,6 +367,9 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.grid img {
+  max-width: 100%;
 }
 
 header {
@@ -479,9 +486,9 @@ nav a:focus {
 .contact,
 .portfolio {
   background-color: #1b1b1a;
-  -webkit-box-shadow: rgba(114, 114, 114, 0.7) 0px 0px 20px;
-          box-shadow: rgba(114, 114, 114, 0.7) 0px 0px 20px;
-  margin: 3% auto;
+  -webkit-box-shadow: rgba(151, 151, 151, 0.7) 0px 0px 30px;
+          box-shadow: rgba(151, 151, 151, 0.7) 0px 0px 30px;
+  margin: 4% auto;
   width: 85%;
   padding-top: 5%;
   border-radius: 50px;
@@ -630,7 +637,7 @@ nav a:focus {
 }
 .projectSkills i {
   color: #0b4149;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 4%;
   padding-top: 0;
 }
@@ -657,6 +664,7 @@ nav a:focus {
   width: -moz-fit-content;
   width: fit-content;
   margin: 2% auto;
+  background-color: #1b1b1a;
 }
 .contact .socialIcons {
   width: 25%;
@@ -673,10 +681,12 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: rgba(151, 151, 151, 0.7) 0px 0px 20px;
+          box-shadow: rgba(151, 151, 151, 0.7) 0px 0px 20px;
 }
 footer h4 {
-  font-family: "Raleway", sans-serif;
-  font-size: 1rem;
+  font-family: "Satisfy", sans-serif;
+  font-size: 1.5rem;
   color: #ededed;
 }
 
@@ -730,7 +740,7 @@ label[for=toggle]:focus {
     top: 0;
     left: 0;
     z-index: 500;
-    font-size: 4rem;
+    font-size: 8rem;
     width: 100%;
     height: 100vh;
     opacity: 0.8;

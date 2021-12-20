@@ -5,7 +5,7 @@
 
 
 body{
-    background-image:url("../images/aboutBackground.png");
+    background-image:url("../files/aboutBackground.png");
 }
 
 .wrapper{
@@ -75,6 +75,9 @@ a{
     margin:2%;
     font-family:'Raleway', sans-serif;
     border:3px solid #726e49;
+    display:inline-block;
+    width:45%;
+    line-height:1.8rem;
 }
 
 .button:hover,
@@ -90,34 +93,37 @@ p{
     font-size:1.2rem;
     text-align:left;
     margin:0;
+    line-height:1.8rem;
 }
 
 .hero{
         //this is the background gradient//
-    background-image:linear-gradient( 
-        61deg, 
-        rgba(30,51,65,1), 
-        rgba(11,65,73,1), 
-        rgba(114,110,73,1), 
-        rgba(107,115,106,1),
-        rgb(49, 49, 49), 
-        rgba(11,65,73,1)
-    );
+    // background-image:linear-gradient( 
+    //     61deg, 
+    //     rgba(30,51,65,1), 
+    //     rgba(11,65,73,1), 
+    //     rgba(114,110,73,1), 
+    //     rgba(107,115,106,1),
+    //     rgb(49, 49, 49), 
+    //     rgba(11,65,73,1)
+    // );
+    
+    background: radial-gradient(circle, rgba(11,65,73,1) 15%, rgba(114,110,73,1) 43%, rgba(107,115,106,1) 69%, rgba(11,65,73,1) 90%, rgba(30,51,65,1) 97%);
         
     // background-image: url('../images/portfolioSiteBackground.png');
     // background-position: bottom;
     // background-size: cover;
-    background-size:200%;
+    background-size:400%;
     background-repeat:no-repeat;
     height:100vh;
     margin:0;
-    animation: heroAnimation 35s linear infinite;
+    animation: heroAnimation 70s linear infinite;
     border-bottom:6px double $secondary-color;
 }
 
 @keyframes heroAnimation{
     0%{
-        background-position:0% 50%;
+        background-position:0% 0%;
     }
     25%{
         background-position:50% 100%;
@@ -126,10 +132,10 @@ p{
         background-position:100% 100%;
     }
     75%{
-        background-position:50% 100%;
+        background-position:100% 50%;
     }
     100%{
-        background-position:0% 50%;
+        background-position:0% 0%;
     }
 
 }
@@ -163,6 +169,10 @@ p{
     flex-wrap:wrap;
     justify-content: center;
     align-items:center;
+
+    img{
+        max-width:100%;
+    }
 
 }
 
@@ -279,8 +289,8 @@ nav a:focus{
 .contact,
 .portfolio{
     background-color:#1b1b1a;
-    box-shadow: rgba(114, 114, 114, 0.7) 0px 0px 20px;
-    margin:3% auto;
+    box-shadow: rgba(151, 151, 151, 0.7) 0px 0px 30px;
+    margin:4% auto;
     width:85%;
     padding-top:5%;
     border-radius:50px;
@@ -432,7 +442,7 @@ nav a:focus{
 
     i{
         color:#0b4149;
-        font-size:3rem;
+        font-size:2.5rem;
         padding:4%;
         padding-top:0;
     }
@@ -461,6 +471,7 @@ nav a:focus{
         display:block;
         width:fit-content;
         margin:2% auto;
+        background-color:$background-color;
 
     }
 
@@ -477,10 +488,11 @@ footer{
     background-color:#0b4149;
     display:flex;
     align-items:center;
+    box-shadow: rgba(151, 151, 151, 0.7) 0px 0px 20px;
 
     h4{
-        font-family:'Raleway', sans-serif;
-        font-size:1rem;
+        font-family:'Satisfy', sans-serif;
+        font-size:1.5rem;
         color:#ededed;
         
         
