@@ -57,8 +57,8 @@ function handleSecondClick () {
   document.documentElement.style.setProperty('--accent-color', '#526a64');
   document.documentElement.style.setProperty('--button-color', '#3d0c15');
   document.documentElement.style.setProperty('--glow-color', 'rgba(220, 221, 216, 0.7) 0px 0px 30px');
-  document.documentElement.style.setProperty('--h1-shadow', '4px 1px 8px #779897');
-  document.documentElement.style.setProperty('--header-gradient', 'linear-gradient(28deg, rgba(220,221,216,1) 28%, rgba(175,197,191,1) 50%, rgba(119,152,151,1) 62%, rgba(82,106,100,1) 74%, rgba(39,51,51,1) 88%)')
+  document.documentElement.style.setProperty('--h1-shadow', '4px 1px 8px #dcddd8');
+  document.documentElement.style.setProperty('--header-gradient', 'linear-gradient(28deg, rgba(220,221,216,1) 5%, rgba(175,197,191,1) 25%, rgba(119,152,151,1) 62%, rgba(82,106,100,1) 74%, rgba(39,51,51,1) 88%)')
   document.documentElement.style.setProperty('--project-border', 'linear-gradient(28deg, rgba(175,197,191,1) 5%, rgba(119,152,151,1) 25%, rgba(82,106,100,1) 49%, rgba(39,51,51,1) 80%');
   document.documentElement.style.setProperty('--background-image', 'url("../files/snowBackground.png")');
   toggle.addEventListener('click', handleThirdClick);
