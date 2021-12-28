@@ -7,23 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,600;1,100;1,200;1,300;1,600&family=Satisfy&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet"> 
 <link rel="shortcut icon" href="./files/favicon.png" type="image/png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 <link rel="stylesheet" href="./styles/styles.css">
-<script src="./script.js"></script>
+
 <script src="https://kit.fontawesome.com/f7a302e66c.js" 
 crossorigin="anonymous"></script>
     <title>Elizabeth Harris | Front-End Web Developer</title>
 </head>
-<body class="default">
+<body>
     <header>
-        <input type="checkbox" id="toggle" name="toggle"> 
-        <label for="toggle">&#8801</label>
+        
         <!-- This is the link for JS colour changer -->
-        <!-- <i class="fas fa-palette colorToggle"></i> -->
+        <i class="fas fa-palette colorToggle" id="colorToggle"></i>
         <nav>
             <ul>
-                <!-- <li><a href="index2.html">.home</a></li>  -->
                 <li><a href="#aboutMe">.about</a></li>
                 <li><a href="#portfolio">.portfolio</a></li>
                 <li><a href="#contact">.contact</a></li>
@@ -88,6 +87,7 @@ crossorigin="anonymous"></script>
                     </div>
                 </div>
                 <img src="./files/elizabethharris.png" alt="avatar of a woman with dark hair and teal glasses">
+                <button onclick="topFunction()" id="myBtn" title="Go to top">🠕 Top</button> 
                 
             </div>       
 
@@ -98,7 +98,7 @@ crossorigin="anonymous"></script>
             <h2>.portfolio</h2>
             
             <div class="portfolioItems">
-                
+
                 <!-- Portfolio Item 3 -->
                 <div class="projects-border">
                 <article class="projects">
@@ -213,7 +213,7 @@ crossorigin="anonymous"></script>
     </footer>
 
     
-    
+    <script src="script.js"></script>
     
 </body>
 </html>

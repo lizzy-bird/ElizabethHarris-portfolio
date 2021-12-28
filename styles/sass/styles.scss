@@ -5,7 +5,8 @@
 
 
 body{
-    background-image:url("../files/aboutBackground.png");
+    background: var(--background-image);
+    
 }
 
 .wrapper{
@@ -22,15 +23,15 @@ h3,
 h4,
 h5{
     margin:0;
-    color:$secondary-color;
+    color:var(--button-color);
     font-family:'Raleway', sans-serif;
     font-weight:200;
 }
 
 h1{
-    color:$secondary-color;
+    color:var(--secondary-color);
     width:100%;
-    font-family:'satisfy', script;
+    font-family: var(--header-font);
     font-size:8rem;
     text-align:center;
     letter-spacing:-2px;
@@ -44,19 +45,12 @@ h2{
     font-family:'satisfy', script;
     width:100%;
     padding-bottom:1%;
-    border-bottom:6px double #0b4149;
-    // opacity:0.25;
-    // transform:rotate(-90deg);
-    // position:relative;
-    // z-index:100;
-    // float:left;
-    // height:fit-content;
-    // margin-top:10%;
+    border-bottom:6px double var(--accent-color);
 }
 
 h3{
     font-size:3rem;
-    color:#726e49;
+    color:var(--button-color);
 }
 
 h4{
@@ -65,30 +59,31 @@ h4{
 }
 
 a{
-    color:$secondary-color;
+    color:var(--text-color);
     font-family:'Raleway', sans-serif;
 }
 
 .button{
-    background-color:#726e49;
+    background-color:var(--button-color);
     padding:10px 15px;
     margin:2%;
     font-family:'Raleway', sans-serif;
-    border:3px solid #726e49;
+    border:3px solid var(--button-color);
     display:inline-block;
     width:45%;
     line-height:1.8rem;
+    color:var(--secondary-color);
 }
 
 .button:hover,
 .button:focus{
-    background-color:#ededed;
-    color:#726e49;
+    background-color:var(--secondary-color);
+    color:var(--button-color);
 }
 
 
 p{
-    color:$secondary-color;
+    color: var(--text-color);
     font-family:'Raleway', sans-serif;
     font-size:1.2rem;
     text-align:left;
@@ -98,27 +93,13 @@ p{
 
 .hero{
         //this is the background gradient//
-    // background-image:linear-gradient( 
-    //     61deg, 
-    //     rgba(30,51,65,1), 
-    //     rgba(11,65,73,1), 
-    //     rgba(114,110,73,1), 
-    //     rgba(107,115,106,1),
-    //     rgb(49, 49, 49), 
-    //     rgba(11,65,73,1)
-    // );
-    
-    background: radial-gradient(circle, rgba(11,65,73,1) 15%, rgba(114,110,73,1) 43%, rgba(107,115,106,1) 69%, rgba(11,65,73,1) 90%, rgba(30,51,65,1) 97%);
-        
-    // background-image: url('../images/portfolioSiteBackground.png');
-    // background-position: bottom;
-    // background-size: cover;
+    background: var(--header-gradient);
     background-size:400%;
     background-repeat:no-repeat;
     height:100vh;
     margin:0;
     animation: heroAnimation 70s linear infinite;
-    border-bottom:6px double $secondary-color;
+    border-bottom:6px double var(--secondary-color);
 }
 
 @keyframes heroAnimation{
@@ -142,8 +123,8 @@ p{
 .grid{
     margin:0; 
     height:100vh;
-    background-image:
     //this is the grid//
+    background-image:
     repeating-linear-gradient(
         0deg, 
         rgba(0, 0, 0, 0.05) 0px, 
@@ -194,13 +175,12 @@ label[for="toggle"]{
 }
 
 i{
-    color:$secondary-color;
+    color:var(--accent-color);
     font-size:2rem;
     
 }
 
 nav{
-    // width:30%; with color changer only
     width:100%;
     display:flex;
     justify-content:right;
@@ -217,7 +197,7 @@ nav ul{
 }
 
 nav a{
-    color:$secondary-color;
+    color:var(--nav-color);
     font-family:'Raleway', sans-serif;
     font-size: 20px;
     text-align:right;
@@ -227,16 +207,20 @@ nav a{
 
 nav li:hover,
 nav a:focus{
-    border-bottom:2px solid $secondary-color;
-    text-shadow: 1px 1px 4px #dbd5cd;
+    border-bottom:2px solid var(--secondary-color);
+    text-shadow: var(--h1-shadow);
 
 }
 
-// .fa-palette:hover{
-//     color:black;
-//     transition: all 0.3s linear;
-//     cursor: pointer;
-// }
+.fa-palette{
+    color:var(--nav-color);
+}
+
+.fa-palette:hover{
+    color:#000000;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
 
 .titleHeading{
     position: absolute;
@@ -251,7 +235,7 @@ nav a:focus{
     flex-wrap: wrap;
 
     h1{
-        text-shadow: 4px 1px 8px #dbd5cd;
+        text-shadow: var(--h1-shadow);
     }
 
 }
@@ -259,7 +243,7 @@ nav a:focus{
 
 
 .tagLine {
-    color:$secondary-color;
+    color:var(--nav-color);
     font-family:'Raleway', sans-serif;
     font-size:20px;
     display:inline-block;
@@ -280,7 +264,7 @@ nav a:focus{
 }
 
 .fa-angles-down:hover{
-    color:black;
+    color:var(--bgcolor);
     cursor: pointer;
     transition:all 0.3s linear;
 }
@@ -288,8 +272,9 @@ nav a:focus{
 .aboutMe,
 .contact,
 .portfolio{
-    background-color:#1b1b1a;
-    box-shadow: rgba(151, 151, 151, 0.7) 0px 0px 30px;
+    
+    background-color:var(--bgcolor);
+    box-shadow: var(--glow-color);
     margin:4% auto;
     width:85%;
     padding-top:5%;
@@ -300,13 +285,13 @@ nav a:focus{
 .aboutMe{
 
     img{
-        background-color:#726e49;
+        background-color:var(--button-color);
         border-radius:50%;
         max-width:100%;
         width:30%;
         height:fit-content;
         margin:0 auto;
-        box-shadow:10px 10px 0 #ededed;
+        box-shadow:10px 10px 0 var(--secondary-color);
     }
 }
 
@@ -338,7 +323,7 @@ nav a:focus{
     font-style:italic;
     font-size:1.25rem;
     text-align:center;
-    color:#726e49;
+    color:var(--button-color);
 
 }
 
@@ -350,7 +335,7 @@ nav a:focus{
     i{
     font-size: 4rem;
     margin:3%;
-    color:#0b4149;
+    color:var(--accent-color);
     }
 }
 
@@ -362,15 +347,35 @@ nav a:focus{
     a{
         font-size:3rem;
         margin:2%;
-        color:#ededed;
+        color:var(--text-color);
     }
 
     i:hover,
     a:hover{
-        color:#0b4149;
+        color:var(--accent-color);
         cursor: pointer;
     }
 }
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: 2px solid var(--secondary-color); /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--accent-color); /* Set a background color */
+    color: var(--secondary-color); /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    font-size: 18px; /* Increase font size */
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
 
 
 
@@ -383,15 +388,7 @@ nav a:focus{
 }
 
 .projects-border{
-    background-image:linear-gradient( 
-        61deg, 
-        rgba(30,51,65,1), 
-        rgba(11,65,73,1), 
-        rgba(114,110,73,1), 
-        rgba(107,115,106,1),
-        rgb(49, 49, 49), 
-        rgba(11,65,73,1)
-        );
+    background-image:var(--project-border);
         padding:5px;
         margin: 3% 0;
         height:fit-content;
@@ -399,7 +396,7 @@ nav a:focus{
     }
     
 .projects{
-    background-color: $background-color;
+    background-color: var(--bgcolor);
     padding:4% 2%;
     // display:flex;
     width:100%;
@@ -430,7 +427,7 @@ nav a:focus{
 
 .summary{
     font-size:1rem;
-    color:#726e49;
+    color:var(--button-color);
     font-style:italic;
     text-align:center;
 
@@ -441,7 +438,7 @@ nav a:focus{
     
 
     i{
-        color:#0b4149;
+        color:var(--accent-color);
         font-size:2.5rem;
         padding:4%;
         padding-top:0;
@@ -462,7 +459,7 @@ nav a:focus{
     h4{
         font-family:'satisfy', script;
         font-size:2.5rem;
-        color:#726e49;
+        color:var(--button-color);
         margin:2% 0;
         
     }
@@ -471,7 +468,7 @@ nav a:focus{
         display:block;
         width:fit-content;
         margin:2% auto;
-        background-color:$background-color;
+        // background-color:var(--bgcolor);
 
     }
 
@@ -485,15 +482,15 @@ nav a:focus{
 footer{
     height:50px;
     margin:0;
-    background-color:#0b4149;
+    background-color: var(--accent-color);
     display:flex;
     align-items:center;
-    box-shadow: rgba(151, 151, 151, 0.7) 0px 0px 20px;
+    box-shadow: var(--glow-color);
 
     h4{
         font-family:'Satisfy', sans-serif;
         font-size:1.5rem;
-        color:#ededed;
+        color: var(--text-color);
         
         
     }

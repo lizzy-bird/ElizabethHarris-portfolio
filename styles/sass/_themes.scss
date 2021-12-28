@@ -1,7 +1,35 @@
 
 
-$background-color: #1b1b1a;
-$primary-color: #EFFDF3;
-$secondary-color: #EDEDED; 
-$accent-color: #0b4149;
-$button-color: #726E49;
+:root{
+    --bgcolor:#1b1b1a;
+    --text-color: #EDEDED;
+    --nav-color:#EDEDED;
+    --secondary-color:#EDEDED;
+    --accent-color:#0b4149;
+    --button-color:#726E49;
+    --glow-color:rgba(151, 151, 151, 0.7) 0px 0px 30px;
+    --h1-shadow:4px 1px 8px #EDEDED;
+    --header-gradient:radial-gradient(
+        circle, 
+        rgba(11,65,73,1) 15%, 
+        rgba(114,110,73,1) 43%, 
+        rgba(107,115,106,1) 69%, 
+        rgba(11,65,73,1) 90%, 
+        rgba(30,51,65,1) 97%);
+
+    --project-border:linear-gradient( 
+        61deg, 
+        rgba(30,51,65,1), 
+        rgba(11,65,73,1), 
+        rgba(114,110,73,1), 
+        rgba(107,115,106,1),
+        rgb(49, 49, 49), 
+        rgba(11,65,73,1)
+        );
+
+    --background-image: url("../files/aboutBackground.png");
+
+    --header-font: 'satisfy', script;
+
+}
+
