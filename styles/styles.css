@@ -896,6 +896,10 @@ label[for=toggle]:focus {
     font-size: 6rem;
   }
 
+  nav ul a {
+    font-size: 2rem;
+  }
+
   .tagLine {
     text-align: center;
     padding-top: 5%;
