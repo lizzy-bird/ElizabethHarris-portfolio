@@ -176,13 +176,16 @@
         width:100%;
     }
 
-    .profile{
+    .aboutMe{
+
         img{
+            height:auto;
             width:80%;
             margin:15% auto;
-            height:auto;
         }
+    }
 
+    .profile{
         flex-direction:column-reverse;
     }
 

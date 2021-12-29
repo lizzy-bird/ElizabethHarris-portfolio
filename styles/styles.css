@@ -930,16 +930,17 @@ label[for=toggle]:focus {
     width: 100%;
   }
 
+  .aboutMe img {
+    height: auto;
+    width: 80%;
+    margin: 15% auto;
+  }
+
   .profile {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-  }
-  .profile img {
-    width: 80%;
-    margin: 15% auto;
-    height: auto;
   }
 
   .socialIcons {
