@@ -541,7 +541,9 @@ nav a:focus {
   border-radius: 50%;
   max-width: 100%;
   width: 30%;
-  height: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0 auto;
   -webkit-box-shadow: 10px 10px 0 var(--secondary-color);
           box-shadow: 10px 10px 0 var(--secondary-color);
@@ -937,6 +939,7 @@ label[for=toggle]:focus {
   .profile img {
     width: 80%;
     margin: 15% auto;
+    height: auto;
   }
 
   .socialIcons {
