@@ -105,6 +105,26 @@
 
 }
 
+@media (max-width:850px){
+    .profile{
+        flex-direction:column-reverse;
+
+        img{
+            width:40%;
+        }
+    }
+
+    .profileText{
+        width:100%;
+    }
+
+    .skillsIcons{
+        width:100%;
+        margin:0 auto;
+        text-align:center;
+    }
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 
@@ -114,6 +134,8 @@
         font-size:3.5rem;
         }
     }
+
+    
 
     .contact{
         .socialIcons{
