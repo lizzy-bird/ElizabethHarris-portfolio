@@ -23,6 +23,8 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
 
+mybutton.addEventListener('click', topFunction);
+
 // * Theme Changer * //
 // create a variable for the toggle
 // listen for when the toggle is clicked
@@ -106,7 +108,7 @@ function handleFifthClick () {
   document.documentElement.style.setProperty('--button-color', 'purple');
   document.documentElement.style.setProperty('--glow-color', 'rgba(0, 128, 0, 0.7) 0px 0px 30px')
   document.documentElement.style.setProperty('--header-gradient', 'linear-gradient(28deg, rgba(255,165,0,1) 13%, rgba(111,0,185,1) 69%, rgba(46,209,0,1) 95%)')
-  document.documentElement.style.setProperty('--project-border', 'green');
+  document.documentElement.style.setProperty('--project-border', 'linear-gradient(28deg, rgba(255,165,0,1) 13%, rgba(111,0,185,1) 69%, rgba(46,209,0,1) 95%)');
   document.documentElement.style.setProperty('--background-image', 'url("../files/spookyBackground.png")');
   // document.documentElement.style.setProperty('--header-font', "'Nosifer', cursive");
   toggle.addEventListener('click', handleFinalClick);

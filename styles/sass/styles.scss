@@ -181,7 +181,7 @@ i{
 }
 
 nav{
-    width:100%;
+    width:90%;
     display:flex;
     justify-content:right;
 
@@ -214,6 +214,7 @@ nav a:focus{
 
 .fa-palette{
     color:var(--nav-color);
+    margin: 50px 20px;
 }
 
 .fa-palette:hover{
@@ -292,6 +293,7 @@ nav a:focus{
         height:fit-content;
         margin:0 auto;
         box-shadow:10px 10px 0 var(--secondary-color);
+        align-items:flex-start;
     }
 }
 
