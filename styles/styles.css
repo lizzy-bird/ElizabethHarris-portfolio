@@ -931,7 +931,6 @@ label[for=toggle]:focus {
   }
 
   .aboutMe img {
-    height: auto;
     width: 80%;
     margin: 15% auto;
   }
