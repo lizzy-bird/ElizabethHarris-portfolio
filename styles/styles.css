@@ -917,7 +917,12 @@ label[for=toggle]:focus {
   }
   .profile img {
     width: 80%;
-    margin-top: 5%;
+    margin: 15% auto;
+  }
+
+  .socialIcons {
+    margin: 15% auto;
+    width: 80%;
   }
 
   .skillsIcons {
@@ -949,8 +954,15 @@ label[for=toggle]:focus {
 
   .contact .socialIcons {
     width: 80%;
+    margin: 15% auto;
+  }
+  .contact p {
+    margin-top: 10%;
   }
 
+  footer {
+    margin: 75px 0;
+  }
   footer h4 {
     font-size: 1rem;
   }
