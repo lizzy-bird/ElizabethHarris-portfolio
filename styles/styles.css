@@ -228,6 +228,7 @@ html {
 
 :root {
   --bgcolor:#1b1b1a;
+  --nav-bg:rgba(27, 27, 26, 0.9);
   --text-color: #EDEDED;
   --nav-color:#EDEDED;
   --secondary-color:#EDEDED;
@@ -311,20 +312,47 @@ a {
 
 .button {
   background-color: var(--button-color);
+  border: 3px solid var(--button-color);
+  color: var(--secondary-color);
   padding: 10px 15px;
+  width: 45%;
+}
+
+.headerButton {
+  background-color: var(--text-color);
+  border: 3px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 10px 15px;
+}
+
+.githubButton {
+  border: 3px solid var(--button-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  width: 45%;
+}
+
+.button, .headerButton, .githubButton {
   margin: 2%;
   font-family: "Raleway", sans-serif;
-  border: 3px solid var(--button-color);
   display: inline-block;
-  width: 45%;
   line-height: 1.8rem;
-  color: var(--secondary-color);
+  text-align: center;
 }
 
 .button:hover,
-.button:focus {
+.button:focus,
+.githubButton:hover,
+.githubButton:focus {
   background-color: var(--secondary-color);
   color: var(--button-color);
+}
+
+.headerButton:hover,
+.headerButton:focus {
+  background-color: var(--accent-color);
+  border-color: var(--text-color);
+  color: var(--text-color);
 }
 
 p {
@@ -403,10 +431,9 @@ p {
 }
 
 header {
-  position: absolute;
   z-index: 100;
-  width: 90%;
-  margin: 2% 5%;
+  width: 100%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,6 +443,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 8vh;
+  padding: 3%;
+  position: fixed;
 }
 
 input[type=checkbox],
@@ -450,6 +480,10 @@ nav ul {
   width: 35%;
 }
 
+nav li {
+  border-bottom: 2px solid transparent;
+}
+
 nav a {
   color: var(--nav-color);
   font-family: "Raleway", sans-serif;
@@ -471,7 +505,7 @@ nav a:focus {
 }
 
 .fa-palette:hover {
-  color: #000000;
+  color: var(--accent-color);
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   cursor: pointer;
@@ -627,35 +661,22 @@ nav a:focus {
 
 #myBtn {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Fixed/sticky position */
   bottom: 20px;
-  /* Place the button at the bottom of the page */
   right: 30px;
-  /* Place the button 30px from the right */
   z-index: 99;
-  /* Make sure it does not overlap */
   border: 2px solid var(--secondary-color);
-  /* Remove borders */
   outline: none;
-  /* Remove outline */
   background-color: var(--accent-color);
-  /* Set a background color */
   color: var(--secondary-color);
-  /* Text color */
   cursor: pointer;
-  /* Add a mouse pointer on hover */
   padding: 15px;
-  /* Some padding */
   font-size: 18px;
-  /* Increase font size */
   font-family: "Raleway", sans-serif;
 }
 
 #myBtn:hover {
   background-color: #555;
-  /* Add a dark-grey background on hover */
 }
 
 .portfolioItems {

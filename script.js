@@ -1,8 +1,25 @@
+// * Fixed Nav Background * //
+
+//select the header
+headerNav = document.getElementById("headerNav");
+
+//when the user scrolls away from the top of the page, run headerBackground function to give it a background colour
+window.addEventListener('scroll', headerBackground);
+
+function headerBackground() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+  headerNav.style.backgroundColor = "var(--nav-bg)";
+  headerNav.style.color = "var(--text-color)";
+  } else {
+    headerNav.style.backgroundColor = "transparent";
+  }  
+}
+
 // * Scroll to top button * //
 // From W3 Schools //
 
 //Get the button:
-mybutton = document.getElementById("myBtn");
+const mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
@@ -37,6 +54,7 @@ toggle.addEventListener('click', handleClick);
 function handleClick () {
   console.log('light mode')
   document.documentElement.style.setProperty('--bgcolor', '#dbd4c7');
+  document.documentElement.style.setProperty('--nav-bg', 'rgba(219, 212, 199, 0.9)');
   document.documentElement.style.setProperty('--text-color', '#414252');
   document.documentElement.style.setProperty('--nav-color', '#414252');
   document.documentElement.style.setProperty('--secondary-color', '#f7fbf8');
@@ -53,6 +71,7 @@ function handleClick () {
 function handleSecondClick () {
   // console.log('winter')
   document.documentElement.style.setProperty('--bgcolor', '#dcddd8');
+  document.documentElement.style.setProperty('--nav-bg', 'rgba(220, 221, 216, 0.9)');
   document.documentElement.style.setProperty('--text-color', '#273333');
   document.documentElement.style.setProperty('--nav-color', '#273333');
   document.documentElement.style.setProperty('--secondary-color', '#779897');
@@ -69,6 +88,7 @@ function handleSecondClick () {
 function handleThirdClick () {
   // console.log('retro rainbow')
   document.documentElement.style.setProperty('--bgcolor', '#eca172');
+  document.documentElement.style.setProperty('--nav-bg', 'rgba(231, 44, 44, 0.9)');
   document.documentElement.style.setProperty('--text-color', '#026a81');
   document.documentElement.style.setProperty('--nav-color', '#eed1b0');
   document.documentElement.style.setProperty('--secondary-color', '#eed1b0');
@@ -85,6 +105,7 @@ function handleThirdClick () {
 function handleFourthClick () {
   // console.log('soft neutral');
   document.documentElement.style.setProperty('--bgcolor', '#f4eeed');
+  document.documentElement.style.setProperty('--nav-bg', 'rgba(244, 238, 237, 0.9)');
   document.documentElement.style.setProperty('--text-color', '#9b8585');
   document.documentElement.style.setProperty('--nav-color', '#000000');
   document.documentElement.style.setProperty('--secondary-color', '#efd9d1');
@@ -102,6 +123,7 @@ function handleFourthClick () {
 function handleFifthClick () {
   // console.log('spooky')
   document.documentElement.style.setProperty('--bgcolor', 'black');
+  document.documentElement.style.setProperty('--nav-bg', 'rgba(0, 255, 0, 0.9)');
   document.documentElement.style.setProperty('--text-color', 'white');
   document.documentElement.style.setProperty('--secondary-color', 'white');
   document.documentElement.style.setProperty('--accent-color', 'orange');
