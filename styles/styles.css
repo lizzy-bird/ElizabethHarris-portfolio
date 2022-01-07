@@ -800,6 +800,7 @@ footer h4 {
   header {
     width: 100%;
     margin: 0 auto;
+    height: 15vh;
   }
 
   nav {
