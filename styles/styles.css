@@ -659,6 +659,13 @@ nav a:focus {
   cursor: pointer;
 }
 
+.profileSkills {
+  margin: 0 auto;
+}
+.profileSkills h3 {
+  text-align: center;
+}
+
 #myBtn {
   display: none;
   position: fixed;
