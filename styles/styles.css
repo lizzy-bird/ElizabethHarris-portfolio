@@ -736,6 +736,7 @@ nav a:focus {
   color: var(--button-color);
   font-style: italic;
   text-align: center;
+  font-weight: 600;
 }
 
 .projectSkills {
